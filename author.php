@@ -10,23 +10,23 @@ $userID = $author->ID;
             <p><?php the_author_meta('description',$userID); ?></p>
             <div class="social-color">
                 
-                <?php if(get_the_author_meta( 'facebook_profile',$user->ID)) : ?>
-                  <a target="_new" href="http://www.facebook.com/<?php echo get_the_author_meta( 'facebook_profile',$user->ID); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
+                <?php if(get_the_author_meta( 'facebook_profile',$userID)) : ?>
+                  <a target="_new" href="http://www.facebook.com/<?php echo get_the_author_meta( 'facebook_profile',$userID); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
                   
               <?php endif; ?>
-              <?php if(get_the_author_meta( 'twitter_profile',$user->ID)) : ?>
-                  <a target="_new" href="http://www.twitter.com/<?php echo get_the_author_meta( 'twitter_profile',$user->ID) ?>" class="twitter"><i class="fa fa-twitter"></i></a>
+              <?php if(get_the_author_meta( 'twitter_profile',$userID)) : ?>
+                  <a target="_new" href="http://www.twitter.com/<?php echo get_the_author_meta( 'twitter_profile',$userID) ?>" class="twitter"><i class="fa fa-twitter"></i></a>
                   
                  <?php endif; ?>
-                 <?php if(get_the_author_meta( 'linkendin_profile',$user->ID)) : ?>
-                  <a target="_new" href="<?php echo get_the_author_meta( 'linkendin_profile',$user->ID); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                 <?php if(get_the_author_meta( 'linkendin_profile',$userID)) : ?>
+                  <a target="_new" href="<?php echo get_the_author_meta( 'linkendin_profile',$userID); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
                   
                  <?php endif; ?>
-                 <?php if(get_the_author_meta( 'github_profile',$user->ID)) : ?>
-                  <a target="_new" href="http://github.com/<?php echo get_the_author_meta( 'github_profile',$user->ID); ?>"><i class="fa fa-github"></i></a>
+                 <?php if(get_the_author_meta( 'github_profile',$userID)) : ?>
+                  <a target="_new" href="http://github.com/<?php echo get_the_author_meta( 'github_profile',$userID); ?>"><i class="fa fa-github"></i></a>
                   
                  <?php endif; ?>
-                 <?php if (get_the_author_meta('url',$user->ID)): ?>
+                 <?php if (get_the_author_meta('url',$userID)): ?>
                   <a target="_new" href="<?php echo get_the_author_meta( 'url' ,$user->ID); ?>" class="linkedin"><i class="fa fa-link"></i></i></a> 
                      
                  <?php endif ?>
