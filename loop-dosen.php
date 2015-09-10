@@ -1,6 +1,6 @@
 <?php 
     $users = get_users( 'nicename&role=editor' );
-    foreach ( $users as $user ) :
+    if($users) : foreach ( $users as $user ) :
 ?>
     <div class="col-md-4 person">
         <div class="frame">
@@ -37,4 +37,4 @@
             </div>
         </div>
     </div>
-<?php endforeach; ?>
+<?php endforeach;endif; ?>
