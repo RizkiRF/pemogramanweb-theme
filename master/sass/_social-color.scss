@@ -1,0 +1,71 @@
+.social-color {
+	&>a {
+		color:#CCC;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.facebook:hover > i {
+		color: #3b5998;
+	}
+
+	.twitter:hover > i {
+		color: #00aced;
+	}
+
+	.youtube:hover > i {
+		color: #bb0000;
+	}
+
+	.googleplus:hover > i {
+		color: #dd4b39;
+	}
+
+	.pinterest:hover > i {
+		color: #cb2027;
+	}
+
+	.linkedin:hover > i {
+		color: #007bb6;
+	}
+
+	.vimeo:hover > i {
+		color: #aad450;
+	}
+
+	.tumblr:hover > i {
+		color: #32506d;
+	}
+
+	.instagram:hover > i {
+		color: #517fa4;
+	}
+
+	.flickr:hover > i {
+		color: #ff0084;
+	}
+
+	.dribbble:hover > i {
+		color: #ea4c89;
+	}
+
+	.foursquare:hover > i {
+		color: #0072b1;
+	}
+
+	.wordpress:hover > i {
+		color: #21759b;
+	}
+
+	.blogger:hover > i {
+		color: #fb8f3d;
+	}
+
+	.soundcloud:hover > i {
+		color: #ff3a00;
+	}
+
+	.behance:hover > i {
+		color: #053eff;
+	}	
+}
