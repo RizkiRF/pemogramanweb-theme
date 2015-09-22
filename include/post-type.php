@@ -41,4 +41,21 @@ function register_cpt_files() {
 
     register_post_type( 'files', $args );
 }
+
+function save_book_meta( $post_id, $post, $update ) {
+
+    $slug = 'files';
+
+    // If this isn't a 'files' post, don't update it.
+    if ( $slug != $post->post_type ) {
+        return;
+    }
+    if(get_post_meta( $post_id, 'tag', TRUE)) {
+        $tags = implode(',',get_post_meta( $post_id, 'tag', TRUE));
+        $data = explode( ',', $tags );
+        wp_set_post_terms( $post_id, array_map('intval', $data), 'types' );
+    } 
+}
+add_action( 'save_post', 'save_book_meta', 10, 3 );
+
  ?>

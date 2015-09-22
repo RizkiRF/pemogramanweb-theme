@@ -5,7 +5,8 @@
 <div class="col-md-3 person">
     <div class="frame">
         <a href="<?php echo get_author_posts_url( $user->ID ); ?>">
-            <img src="<?php echo get_the_author_meta( 'profile_photo',$user->ID); ?>" alt="Asisten">
+            <div class="display-picture" style="background-image:url('<?php echo wp_get_attachment_image_src( get_the_author_meta('profile_photo_id',$user->ID), 'medium')[0]; ?>');">
+            </div>
         </a>
         <div class="caption">
             <a href="<?php echo get_author_posts_url( $user->ID ); ?>"><?php echo $user->display_name; ?></a>

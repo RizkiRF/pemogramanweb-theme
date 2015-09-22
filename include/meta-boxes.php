@@ -20,6 +20,17 @@ function file_meta_boxes() {
         'class'       => '',
         'max'		  => 1,
         'choices'     => array()
+      ),
+      array(
+        'id'          => 'tag',
+        'label'       => 'Select Tags',
+        'desc'        => 'Select some tags for show in download section',
+        'std'         => '',
+        'type'        => 'taxonomy-checkbox',
+        'taxonomy'    => 'types',
+        'class'       => '',
+        'max'         => 1,
+        'choices'     => array()
       )
     )
   );

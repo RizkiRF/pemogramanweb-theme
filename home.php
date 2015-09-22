@@ -15,7 +15,7 @@ if ( function_exists( 'ot_get_option' ) ) {
                         Pemograman web adalah jalan menjadi seorang <strong>frontend developer</strong>
                     </h4>
                     <div class="pd-top"></div>
-                    <a href="#apa" class="btn btn-lg btn-default">Selengkapnya</a>
+                    <a href="http://pw2.if-unpas.org/dokumentasi-php/" target="_new" class="btn btn-lg btn-default">Dokumentasi PHP</a>
                     <a href="#download" class="btn btn-lg btn-default">Download Materi</a>
                 </div>
             </div>
@@ -110,7 +110,7 @@ if ( function_exists( 'ot_get_option' ) ) {
                     <h2>TIM  <strong><i class="fa fa-shield"></i></strong> DOSEN</h2>
                 </div>
             </div>
-            <div class="row pd-top">
+            <div class="pd-top person-wrap">
                 <?php get_template_part('loop','dosen'); ?>
             </div>
         </div>

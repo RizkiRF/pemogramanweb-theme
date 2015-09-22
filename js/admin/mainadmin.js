@@ -21,6 +21,7 @@ jQuery(document).ready(function($) {
         // When a file is selected, grab the URL and set it as the text field's value
         mediaUploader_main_photo.on('select', function() {
             attachment = mediaUploader_main_photo.state().get('selection').first().toJSON();
+            $('#image-url-main-photo-id').val(attachment.id);
             $('#image-url-main-photo').val(attachment.url);
         });
         // Open the uploader dialog
@@ -48,6 +49,7 @@ jQuery(document).ready(function($) {
         // When a file is selected, grab the URL and set it as the text field's value
         mediaUploader_profile_photo.on('select', function() {
             attachment = mediaUploader_profile_photo.state().get('selection').first().toJSON();
+            $('#image-url-profile-photo-id').val(attachment.id);
             $('#image-url-profile-photo').val(attachment.url);
         });
         // Open the uploader dialog

@@ -5,13 +5,13 @@
     ));
     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
         foreach ( $terms as $term ) :
-            $the_query = new WP_Query("taxonomy=types&term=$term->slug&posts_per_page=-1");
+            $the_query = new WP_Query("taxonomy=types&term=$term->slug&posts_per_page=-1&orderby=date&order=DESC");
 ?>
             <div class="col-md-4">
                 <div class="download-wrap">
                     <div class="download-header">
                         <p class="download-title"><?php echo $term->name; ?></p>
-                        <p class="download-icon"><i class="fa fa-slideshare"></i></p>
+                        <p class="download-icon"><i class="fa fa-book"></i></p>
                         <select class="cs-select cs-skin-overlay">
                             <option value="" disabled selected>Pilih Berkas</option>
                             <optgroup label="Daftar Download">

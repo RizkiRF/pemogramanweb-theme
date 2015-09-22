@@ -53,6 +53,17 @@
 		color:#FFF;
 		border:2px solid #000;
 	}
+
+	&:active {
+		background-color: #FFF;
+		border:2px solid #000;
+	}
+
+	&:focus {
+	    	background-color: #FFF;
+    		border-color: #000;
+    		outline: transparent;
+	}
 }
 
 /**
@@ -317,7 +328,18 @@ header {
 			font-weight: bold;
 		}
 	}
+	.person-wrap {
+		width:960px;
+		margin:0 auto;
+		text-align: center;
+		&:after {
+			content: " ";
+			clear: both;
+		}
+	}
 	.person {
+		float:none;
+		display: inline-block;
 		.frame {
 			position: relative;
 			padding-top:100px;
@@ -337,6 +359,7 @@ header {
 				}
 			}
 		}
+
 		.bubble-right
 		{
 			position: relative;
@@ -414,6 +437,9 @@ header {
 		margin-bottom: 50px;
 		.frame {
 			position: relative;
+			&> a {
+				display: block;
+			}
 			img {
 				width: 100%;
 			}	
@@ -423,6 +449,12 @@ header {
 			a {
 				color:#000;
 			}
+		}
+
+		.display-picture {
+			height: 200px;
+		     background-size: cover;
+			background-repeat: no-repeat;
 		}
 	}
 }

@@ -2,13 +2,14 @@
     $users = get_users( 'nicename&role=editor' );
     if($users) : foreach ( $users as $user ) :
 ?>
-    <div class="col-md-4 person">
+    <div class="col-md-5 person">
         <div class="frame">
             <a href="<?php echo get_author_posts_url( $user->ID ); ?>">
-                <img src="<?php echo get_the_author_meta( 'profile_photo',$user->ID); ?>" alt="Person">
+                <img src="<?php echo wp_get_attachment_image_src( get_the_author_meta('profile_photo_id',$user->ID), 'medium')[0]; ?> " alt="Person">
             </a>
             <div class="caption">
                 <div class="bubble-center animated bounceIn">
+                    
                     <span>Hai, Nama Saya <strong><?php echo $user->display_name; ?></strong> Kalian bisa temukan saya di</span>
                     <div class="social-color" style="display:inline-block;">
                         &nbsp;

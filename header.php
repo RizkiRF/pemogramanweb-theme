@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pemograman Web</title>
+    <title>
+        <?php is_front_page() ? bloginfo('name') : the_title(); ?>
+    </title>
     <!-- Bootstrap -->
     <?php wp_head(); ?>
     <link rel='shortcut icon' type='image/x-icon' href='<?php echo get_template_directory_uri(); ?>/favicon.ico' />

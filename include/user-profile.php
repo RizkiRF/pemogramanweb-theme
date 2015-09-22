@@ -25,6 +25,7 @@ function add_extra_pw_details( $user ) {
                 <td>
                 	<div class="frame-preview" style="background-image:url('<?php echo esc_attr(get_the_author_meta( 'main_photo', $user->ID )); ?>');"></div>
                 	<input id="image-url-main-photo" type="text" name="main_photo" value="<?php echo esc_attr(get_the_author_meta( 'main_photo', $user->ID )); ?>"  />
+                    <input id="image-url-main-photo-id" type="hidden" name="main_photo_id" value="<?php echo esc_attr(get_the_author_meta( 'main_photo_id', $user->ID )); ?>"  />
   				<input id="upload-button-main-photo" type="button" class="button" value="Upload Image" />
            	</td>
             </tr>	
@@ -33,7 +34,8 @@ function add_extra_pw_details( $user ) {
                 <td>
                 	<div class="frame-preview" style="background-image:url('<?php echo esc_attr(get_the_author_meta( 'profile_photo', $user->ID )); ?>');"></div>
                 	<input id="image-url-profile-photo" type="text" name="profile_photo" value="<?php echo esc_attr(get_the_author_meta( 'profile_photo', $user->ID )); ?>" />
-  				<input id="upload-button-profile-photo" type="button" class="button" value="Upload Image" />
+                    <input id="image-url-profile-photo-id" type="hidden" name="profile_photo_id" value="<?php echo esc_attr(get_the_author_meta( 'profile_photo_id', $user->ID )); ?>" />
+  				    <input id="upload-button-profile-photo" type="button" class="button" value="Upload Image" />
                 	<p class="description">For best experience, please using with background transparent</p>
            	</td>
             </tr>	
@@ -84,10 +86,12 @@ add_action( 'edit_user_profile_update', 'save_extra_pw_details' );
 	function save_extra_pw_details( $user_id ) {
 		update_user_meta( $user_id,'status_profile', sanitize_text_field( $_POST['status_profile'] ) );
 		update_user_meta( $user_id,'facebook_profile', sanitize_text_field( $_POST['facebook_profile'] ) );
-    		update_user_meta( $user_id,'twitter_profile', sanitize_text_field( $_POST['twitter_profile'] ) );
-    		update_user_meta( $user_id,'linkendin_profile', sanitize_text_field( $_POST['linkendin_profile'] ) );
-    		update_user_meta( $user_id,'github_profile', sanitize_text_field( $_POST['github_profile'] ) );
-    		update_user_meta( $user_id,'main_photo', sanitize_text_field( $_POST['main_photo'] ) );
-    		update_user_meta( $user_id,'profile_photo', sanitize_text_field( $_POST['profile_photo'] ) );
+		update_user_meta( $user_id,'twitter_profile', sanitize_text_field( $_POST['twitter_profile'] ) );
+		update_user_meta( $user_id,'linkendin_profile', sanitize_text_field( $_POST['linkendin_profile'] ) );
+		update_user_meta( $user_id,'github_profile', sanitize_text_field( $_POST['github_profile'] ) );
+		update_user_meta( $user_id,'main_photo', sanitize_text_field( $_POST['main_photo'] ) );
+        update_user_meta( $user_id,'main_photo_id', sanitize_text_field( $_POST['main_photo_id'] ) );
+		update_user_meta( $user_id,'profile_photo', sanitize_text_field( $_POST['profile_photo'] ) );
+        update_user_meta( $user_id,'profile_photo_id', sanitize_text_field( $_POST['profile_photo_id'] ) );
 	}
 ?>
