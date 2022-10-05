@@ -61,7 +61,12 @@ function add_extra_pw_details( $user ) {
                 	<p class="description">Without "@"</p>
            	</td>
             </tr>
-
+		<th><label for="instagram_profile">Instagram Username<label></th>
+			<input type="text" name="instagram_profile" value="<?php echo esc_attr(get_the_author_meta( 'instagram_profile', $ure->ID )); ?>" class="regular-txt" />
+			<p class="description">Without "@"</p>
+		</td>
+			
+ 
             <tr>
                 <th><label for="linkendin_profile">Linked in</label></th>
                 <td>
@@ -87,6 +92,7 @@ add_action( 'edit_user_profile_update', 'save_extra_pw_details' );
 		update_user_meta( $user_id,'status_profile', sanitize_text_field( $_POST['status_profile'] ) );
 		update_user_meta( $user_id,'facebook_profile', sanitize_text_field( $_POST['facebook_profile'] ) );
 		update_user_meta( $user_id,'twitter_profile', sanitize_text_field( $_POST['twitter_profile'] ) );
+		update_user_meta( $user_id,'instagram_profile', sanitize_text_field($_POST['instagram_profile'] ) );
 		update_user_meta( $user_id,'linkendin_profile', sanitize_text_field( $_POST['linkendin_profile'] ) );
 		update_user_meta( $user_id,'github_profile', sanitize_text_field( $_POST['github_profile'] ) );
 		update_user_meta( $user_id,'main_photo', sanitize_text_field( $_POST['main_photo'] ) );
